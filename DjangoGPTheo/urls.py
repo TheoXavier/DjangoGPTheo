@@ -15,8 +15,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.shortcuts import redirect
+from webapp.views import openai
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', openai.redirect_correcao),
+    #path('', include('webapp.urls'))
+    path('correcao/', openai.correcao, name="correcao")
 ]

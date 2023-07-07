@@ -1,0 +1,29 @@
+<nav class="navbar navbar-dark navbar-expand-lg bg-primary sticky-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">GPTheo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link
+        {% if view.id == 'correcao' %}
+            active 
+        {% endif %}" {% if view.id == 'correcao' %} aria-current="page" {% endif %} href="#">Home</a>
+                <a class="nav-link
+        {% if view.id == 'criacao' %}
+            active 
+        {% endif %}" {% if view.id == 'criacao' %} aria-current="page" {% endif %} href="#">Criacao</a>
+                <a class="nav-link
+            {% if view.id == 'geral' %}
+                active 
+            {% endif %}" {% if view.id == 'geral' %} aria-current="page" {% endif %} href="#">Geral</a>
+                <a class="nav-link
+            {% if view.id == 'historico' %}
+                active 
+            {% endif %}" {% if view.id == 'historico' %} aria-current="page" {% endif %} href="#">Histórico</a>
+            </div>
+        </div>
+    </div>
+</nav>

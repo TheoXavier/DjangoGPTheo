@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% if response %}
+<pre>
+<code class="line-numbers language-{{linguagem}}">
+        {{response}}
+</code>
+</pre>
+<br><br>
+    {% else %}
+<pre>
+<code class="line-numbers language-python">
+if code = None:
+    print("Não tem código para exibir")
+else:
+    print(code)
+</code>
+</pre>
+        <br><br>
+    {% endif %}
+{% with text_area_placeholder="Digite o código para revisão" view_url="correcao" %}
+{% include "code_form.html"%}
+{% endwith %}
+{% endblock %}
