@@ -1,0 +1,7 @@
+*.pyc
+venv/
+.vscode/
+.idea/
+.env
+Pipfile.lock
+__pycache__/
